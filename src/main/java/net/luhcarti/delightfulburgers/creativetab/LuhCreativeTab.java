@@ -17,9 +17,14 @@ public class LuhCreativeTab {
     }
 
     private static void addItemsToFDCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        event.accept(LuhItems.BACON_BURGER);
-        event.accept(LuhItems.CHICKEN_BURGER);
-        event.accept(LuhItems.DOUBLE_PATTY_BURGER);
-        event.accept(LuhItems.BASIC_BURGER);
+        try{
+            event.accept(LuhItems.BACON_BURGER);
+            event.accept(LuhItems.CHICKEN_BURGER);
+            event.accept(LuhItems.DOUBLE_PATTY_BURGER);
+            event.accept(LuhItems.BASIC_BURGER);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
